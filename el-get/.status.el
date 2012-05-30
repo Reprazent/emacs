@@ -1,0 +1,1 @@
+(:el-get "installed" :textmate "installed" :rails-el "installed" :wrap-region "installed" :full-ack "installed" :smart-tab "installed" :magit "installed" :flymake-extension "installed" :dired+ "installed" :yaml-mode "installed" :rhtml-mode "installed" :browse-kill-ring+ "installed" :ack "installed")

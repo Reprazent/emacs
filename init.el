@@ -1,0 +1,43 @@
+;; el-get
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://github.com/dimitri/el-get/raw/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
+
+(el-get 'sync)
+
+; handy function to load all elisp files in a directory
+(load-file "~/.emacs.d/load-directory.el");;
+
+;; emacs configuration
+(push "/usr/local/bin" exec-path)
+(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/utilities")
+(add-to-list 'load-path "~/.emacs.d/vendor")
+(mapcar 'load-directory '("~/.emacs.d/el-get"))
+
+
+; handy function to load all elisp files in a directory
+(load-file "~/.emacs.d/load-directory.el")
+; load utility functions
+(mapcar 'load-directory '("~/.emacs.d/utilities"))
+(mapcar 'load-directory '("~/.emacs.d/vendor"))
+
+(wrap-region-global-mode t)
+(textmate-mode t)
+
+
+
+;; Start the server for usefor opening from command line
+(server-start)
+
+(require 'linum)
+(global-linum-mode 1)
+
+; load personal customizations (keybindings, colors, etc.)
+(mapcar 'load-directory '("~/.emacs.d/customizations"))
+
