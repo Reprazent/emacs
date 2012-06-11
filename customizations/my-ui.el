@@ -19,7 +19,7 @@
 ;; flash screen for c-g do not ring bell
 (set-variable (quote visible-bell) t nil)
 
-(set-frame-font "Bitstream Vera Sans Mono-16")
+(set-frame-font "Bitstream Vera Sans Mono-13")
 ;;(load-theme 'solarized-dark)
 (load-theme 'sunburst)
 (global-hl-line-mode 1)
@@ -48,7 +48,7 @@
 (add-to-list 'default-frame-alist '(alpha 95 95))
 
 ; smoother scrolling
-(setq mouse-wheel-scroll-amount '(0.001))
+(setq mouse-wheel-scroll-amount '(0.0001))
 
 ; Prettier line numbers
 (custom-set-faces

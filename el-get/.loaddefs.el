@@ -1783,41 +1783,24 @@ running 'man git-rebase' at the command line) for details.
 
 ;;;***
 
-;;;### (autoloads (smart-tab-mode smart-tab-mode-on smart-tab) "smart-tab"
-;;;;;;  "smart-tab/smart-tab.el" (20421 16485))
-;;; Generated autoloads from smart-tab/smart-tab.el
+;;;### (autoloads (ruby-electric-mode) "ruby-electric" "ruby-electric/ruby-electric.el"
+;;;;;;  (20433 40085))
+;;; Generated autoloads from ruby-electric/ruby-electric.el
 
-(autoload 'smart-tab "smart-tab" "\
-Try to 'do the smart thing' when tab is pressed.
-`smart-tab' attempts to expand the text before the point or
-indent the current line or selection.
+(autoload 'ruby-electric-mode "ruby-electric" "\
+Toggle Ruby Electric minor mode.
+With no argument, this command toggles the mode.  Non-null prefix
+argument turns on the mode.  Null prefix argument turns off the
+mode.
 
-In a regular buffer, `smart-tab' will attempt to expand with
-either `hippie-expand' or `dabbrev-expand', depending on the
-value of `smart-tab-using-hippie-expand'. Alternatively, if
-`auto-complete-mode' is enabled in the current buffer,
-`auto-complete' will be used to attempt expansion. If the mark is
-active, or PREFIX is \\[universal-argument], then `smart-tab'
-will indent the region or the current line (if the mark is not
-active).
-
-\(fn &optional PREFIX)" t nil)
-
-(autoload 'smart-tab-mode-on "smart-tab" "\
-Turn on `smart-tab-mode'.
-
-\(fn)" nil nil)
-
-(autoload 'smart-tab-mode "smart-tab" "\
-Enable `smart-tab' to be used in place of tab.
-
-With no argument, this command toggles the mode.
-Non-null prefix argument turns on the mode.
-Null prefix argument turns off the mode.
+When Ruby Electric mode is enabled, an indented 'end' is
+heuristicaly inserted whenever typing a word like 'module',
+'class', 'def', 'if', 'unless', 'case', 'until', 'for', 'begin',
+'do'. Simple, double and back quotes as well as braces are paired
+auto-magically. Expansion does not occur inside comments and
+strings. Note that you must have Font Lock enabled.
 
 \(fn &optional ARG)" t nil)
-
-(autoload 'global-smart-tab-mode-enable-in-buffers "smart-tab")
 
 ;;;***
 
@@ -1897,10 +1880,12 @@ Simple mode to edit YAML.
 
 ;;;***
 
-;;;### (autoloads nil nil ("el-get/el-get-install.el" "el-get/el-get.el"
-;;;;;;  "flymake-extension/flymake-extension.el" "magit/50magit.el"
-;;;;;;  "magit/magit-bisect.el" "magit/magit-key-mode.el" "magit/magit-pkg.el"
-;;;;;;  "magit/magit-wip.el" "rails-el/inflections.el" "rails-el/predictive-prog-mode.el"
+;;;### (autoloads nil nil ("auto-complete+/auto-complete+.el" "auto-complete/auto-complete-config.el"
+;;;;;;  "auto-complete/auto-complete-pkg.el" "auto-complete/auto-complete.el"
+;;;;;;  "el-get/el-get-install.el" "el-get/el-get.el" "flymake-extension/flymake-extension.el"
+;;;;;;  "magit/50magit.el" "magit/magit-bisect.el" "magit/magit-key-mode.el"
+;;;;;;  "magit/magit-pkg.el" "magit/magit-wip.el" "popup/popup-test.el"
+;;;;;;  "popup/popup.el" "rails-el/inflections.el" "rails-el/predictive-prog-mode.el"
 ;;;;;;  "rails-el/rails-bytecompile.el" "rails-el/rails-cmd-proxy.el"
 ;;;;;;  "rails-el/rails-compat.el" "rails-el/rails-controller-layout.el"
 ;;;;;;  "rails-el/rails-controller-minor-mode.el" "rails-el/rails-core.el"
@@ -1918,8 +1903,9 @@ Simple mode to edit YAML.
 ;;;;;;  "rails-el/rails-view-minor-mode.el" "rails-el/rails-ws.el"
 ;;;;;;  "rails-el/rails.el" "rhtml-mode/rhtml-erb.el" "rhtml-mode/rhtml-fonts.el"
 ;;;;;;  "rhtml-mode/rhtml-mode.el" "rhtml-mode/rhtml-navigation.el"
-;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el")
-;;;;;;  (20422 8236 575839))
+;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el"
+;;;;;;  "ruby-electric/ruby-electric-autoloads.el" "ruby-electric/ruby-electric-pkg.el")
+;;;;;;  (20433 40087 957253))
 
 ;;;***
 
