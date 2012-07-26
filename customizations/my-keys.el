@@ -61,3 +61,6 @@
 (global-set-key (kbd "s-d") 'split-window-horizontally)
 (global-set-key (kbd "s-D") 'split-window-vertically)
 (global-set-key [(control tab)] 'other-window)
+
+; ace-jump-mode
+(global-set-key (kbd "C-x SPC") 'ace-jump-mode)

@@ -27,6 +27,7 @@
 (mapcar 'load-directory '("~/.emacs.d/utilities"))
 (mapcar 'load-directory '("~/.emacs.d/vendor"))
 
+
 (wrap-region-global-mode t)
 (textmate-mode t)
 

@@ -22,6 +22,10 @@
 (require 'ansi-color)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
+(defadvice ansi-term (after advise-ansi-term-coding-system)
+    (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
+(ad-activate 'ansi-term)
+
 ; escape the shell
 (add-hook 'eshell-mode-hook
   '(lambda nil (local-set-key "\C-u" 'eshell-kill-input)))
