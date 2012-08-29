@@ -41,6 +41,17 @@ Not documented
 
 ;;;***
 
+;;;### (autoloads (android-mode) "android-mode" "android-mode/android-mode.el"
+;;;;;;  (20498 20852))
+;;; Generated autoloads from android-mode/android-mode.el
+
+(autoload 'android-mode "android-mode" "\
+Android application development minor mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads (browse-kill-ring-copy-to-other-ring toggle-browse-kill-ring-display-style
 ;;;;;;  browse-kill-ring-switch-to-other-kill-ring browse-kill-ring
 ;;;;;;  browse-kill-ring-edit-finish browse-kill-ring-edit browse-kill-ring-default-keybindings
@@ -1811,6 +1822,17 @@ running 'man git-rebase' at the command line) for details.
 
 ;;;***
 
+;;;### (autoloads (smex-initialize) "smex" "smex/smex.el" (20506
+;;;;;;  25976))
+;;; Generated autoloads from smex/smex.el
+
+(autoload 'smex-initialize "smex" "\
+Not documented
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (textmate-mode) "textmate" "textmate/textmate.el"
 ;;;;;;  (20421 15742))
 ;;; Generated autoloads from textmate/textmate.el
@@ -1922,9 +1944,8 @@ Simple mode to edit YAML.
 ;;;;;;  "rails-el/rails.el" "rhtml-mode/rhtml-erb.el" "rhtml-mode/rhtml-fonts.el"
 ;;;;;;  "rhtml-mode/rhtml-mode.el" "rhtml-mode/rhtml-navigation.el"
 ;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el"
-;;;;;;  "ruby-electric/ruby-electric-autoloads.el" "ruby-electric/ruby-electric-pkg.el"
-;;;;;;  "ruby-test/ruby-test.el" "twittering-mode/test.el") (20483
-;;;;;;  50810 716453))
+;;;;;;  "ruby-test/ruby-test.el" "twittering-mode/test.el") (20506
+;;;;;;  25977 485721))
 
 ;;;***
 
