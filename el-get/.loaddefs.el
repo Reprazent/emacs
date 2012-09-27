@@ -3,9 +3,34 @@
 ;;; Code:
 
 
-;;;### (autoloads (ace-jump-mode) "ace-jump-mode" "ace-jump-mode/ace-jump-mode.el"
-;;;;;;  (20446 63593))
+;;;### (autoloads (ace-jump-mode ace-jump-line-mode ace-jump-word-mode
+;;;;;;  ace-jump-char-mode ace-jump-mode-pop-mark) "ace-jump-mode"
+;;;;;;  "ace-jump-mode/ace-jump-mode.el" (20580 3155))
 ;;; Generated autoloads from ace-jump-mode/ace-jump-mode.el
+
+(autoload 'ace-jump-mode-pop-mark "ace-jump-mode" "\
+Pop up a postion from `ace-jump-mode-mark-ring', and jump back to that position
+
+\(fn)" t nil)
+
+(autoload 'ace-jump-char-mode "ace-jump-mode" "\
+AceJump char mode
+
+\(fn QUERY-CHAR)" t nil)
+
+(autoload 'ace-jump-word-mode "ace-jump-mode" "\
+AceJump word mode.
+You can set `ace-jump-word-mode-use-query-char' to nil to prevent
+asking for a head char, that will mark all the word in current
+buffer.
+
+\(fn HEAD-CHAR)" t nil)
+
+(autoload 'ace-jump-line-mode "ace-jump-mode" "\
+AceJump line mode.
+Marked each no empty line and move there
+
+\(fn)" t nil)
 
 (autoload 'ace-jump-mode "ace-jump-mode" "\
 AceJump mode is a minor mode for you to quick jump to a
@@ -1924,15 +1949,15 @@ Simple mode to edit YAML.
 ;;;;;;  "auto-complete/auto-complete-pkg.el" "auto-complete/auto-complete.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get.el" "flymake-extension/flymake-extension.el"
 ;;;;;;  "magit/50magit.el" "magit/magit-bisect.el" "magit/magit-key-mode.el"
-;;;;;;  "magit/magit-pkg.el" "magit/magit-wip.el" "multiple-line-edit/multiple-line-edit.el"
-;;;;;;  "popup/popup-test.el" "popup/popup.el" "rails-el/inflections.el"
-;;;;;;  "rails-el/predictive-prog-mode.el" "rails-el/rails-bytecompile.el"
-;;;;;;  "rails-el/rails-cmd-proxy.el" "rails-el/rails-compat.el"
-;;;;;;  "rails-el/rails-controller-layout.el" "rails-el/rails-controller-minor-mode.el"
-;;;;;;  "rails-el/rails-core.el" "rails-el/rails-features.el" "rails-el/rails-find.el"
-;;;;;;  "rails-el/rails-fixture-minor-mode.el" "rails-el/rails-functional-test-minor-mode.el"
-;;;;;;  "rails-el/rails-helper-minor-mode.el" "rails-el/rails-layout-minor-mode.el"
-;;;;;;  "rails-el/rails-lib.el" "rails-el/rails-log.el" "rails-el/rails-mailer-minor-mode.el"
+;;;;;;  "magit/magit-pkg.el" "magit/magit-wip.el" "popup/popup-test.el"
+;;;;;;  "popup/popup.el" "rails-el/inflections.el" "rails-el/predictive-prog-mode.el"
+;;;;;;  "rails-el/rails-bytecompile.el" "rails-el/rails-cmd-proxy.el"
+;;;;;;  "rails-el/rails-compat.el" "rails-el/rails-controller-layout.el"
+;;;;;;  "rails-el/rails-controller-minor-mode.el" "rails-el/rails-core.el"
+;;;;;;  "rails-el/rails-features.el" "rails-el/rails-find.el" "rails-el/rails-fixture-minor-mode.el"
+;;;;;;  "rails-el/rails-functional-test-minor-mode.el" "rails-el/rails-helper-minor-mode.el"
+;;;;;;  "rails-el/rails-layout-minor-mode.el" "rails-el/rails-lib.el"
+;;;;;;  "rails-el/rails-log.el" "rails-el/rails-mailer-minor-mode.el"
 ;;;;;;  "rails-el/rails-migration-minor-mode.el" "rails-el/rails-model-layout.el"
 ;;;;;;  "rails-el/rails-model-minor-mode.el" "rails-el/rails-navigation.el"
 ;;;;;;  "rails-el/rails-plugin-minor-mode.el" "rails-el/rails-project.el"
@@ -1945,7 +1970,7 @@ Simple mode to edit YAML.
 ;;;;;;  "rhtml-mode/rhtml-mode.el" "rhtml-mode/rhtml-navigation.el"
 ;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el"
 ;;;;;;  "ruby-test/ruby-test.el" "twittering-mode/test.el") (20580
-;;;;;;  2768 297442))
+;;;;;;  3156 211833))
 
 ;;;***
 
