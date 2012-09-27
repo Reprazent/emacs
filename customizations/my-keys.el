@@ -64,3 +64,6 @@
 
 ; ace-jump-mode
 (global-set-key (kbd "C-x SPC") 'ace-jump-mode)
+
+; Gem stuff
+(global-set-key (kbd "M-g") 'pjaspers-bundle-line-for-gem)
