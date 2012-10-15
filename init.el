@@ -1,4 +1,5 @@
 ;; el-get
+(load "~/.emacs.d/vendor/el-get-extras.el")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil t)

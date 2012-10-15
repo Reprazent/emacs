@@ -96,4 +96,10 @@
   ("remote-decoding" "base64 -d -i")
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")))
+  ("perl" "\\perl"))
+ (["ssh2" nil "marleen" nil]
+  nil)
+ (["ssh1" nil "marleen" nil]
+  nil)
+ (["ssh2" "tomklaasen" "192.168.1.5" nil]
+  nil))

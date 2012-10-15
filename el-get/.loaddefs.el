@@ -5,7 +5,7 @@
 
 ;;;### (autoloads (ace-jump-mode ace-jump-line-mode ace-jump-word-mode
 ;;;;;;  ace-jump-char-mode ace-jump-mode-pop-mark) "ace-jump-mode"
-;;;;;;  "ace-jump-mode/ace-jump-mode.el" (20580 3155))
+;;;;;;  "ace-jump-mode/ace-jump-mode.el" (20604 5463))
 ;;; Generated autoloads from ace-jump-mode/ace-jump-mode.el
 
 (autoload 'ace-jump-mode-pop-mark "ace-jump-mode" "\
@@ -56,158 +56,20 @@ You can constrol whether use the case sensitive via
 
 ;;;***
 
-;;;### (autoloads (ack) "ack" "ack/ack.el" (20422 8236))
-;;; Generated autoloads from ack/ack.el
-
-(autoload 'ack "ack" "\
-Not documented
-
-\(fn COMMAND-ARGS)" t nil)
-
-;;;***
-
-;;;### (autoloads (android-mode) "android-mode" "android-mode/android-mode.el"
-;;;;;;  (20498 20852))
-;;; Generated autoloads from android-mode/android-mode.el
-
-(autoload 'android-mode "android-mode" "\
-Android application development minor mode.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads (browse-kill-ring-copy-to-other-ring toggle-browse-kill-ring-display-style
-;;;;;;  browse-kill-ring-switch-to-other-kill-ring browse-kill-ring
-;;;;;;  browse-kill-ring-edit-finish browse-kill-ring-edit browse-kill-ring-default-keybindings
-;;;;;;  browse-kill-ring-forward browse-kill-ring-append-insert-and-move
-;;;;;;  browse-kill-ring-prepend-insert-and-move browse-kill-ring-insert-and-move
-;;;;;;  browse-kill-ring-delete browse-kill-ring-alternative-push-function
-;;;;;;  browse-kill-ring-alternative-ring browse-kill-ring-alternative-yank-commands
-;;;;;;  browse-kill-ring-yank-commands) "browse-kill-ring+" "browse-kill-ring+/browse-kill-ring+.el"
-;;;;;;  (20421 64033))
-;;; Generated autoloads from browse-kill-ring+/browse-kill-ring+.el
-
-(defvar browse-kill-ring-yank-commands (if (boundp 'secondary-selection-yank-commands) secondary-selection-yank-commands '(yank icicle-yank-maybe-completing)) "\
-*Commands that yank.
-Used by `yank-pop' to tell whether the previous command was a yank command.
-Used only if `browse-kill-ring-default-keybindings' has been called,
-so `yank-pop' is advised.")
-
-(custom-autoload 'browse-kill-ring-yank-commands "browse-kill-ring+" t)
-
-(defvar browse-kill-ring-alternative-yank-commands (and (boundp 'secondary-selection-yank-secondary-commands) secondary-selection-yank-secondary-commands) "\
-*Commands that yank using the alternative selection ring.
-Used by `browse-kill-ring-setup' to tell whether the previous command
-yanked from `browse-kill-ring-alternative-ring'.")
-
-(custom-autoload 'browse-kill-ring-alternative-yank-commands "browse-kill-ring+" t)
-
-(defvar browse-kill-ring-alternative-ring (and (boundp 'secondary-selection-ring) 'secondary-selection-ring) "\
-*Selection ring to use as an alternative to `kill-ring'.
-A value of nil means there is no alternative selection ring; that is,
-`kill-ring' is used always.")
-
-(custom-autoload 'browse-kill-ring-alternative-ring "browse-kill-ring+" t)
-
-(defvar browse-kill-ring-alternative-push-function (and (boundp 'secondary-selection-ring) 'add-secondary-to-ring) "\
-*Function that adds item to the front of alternative selection ring.
-This is analogous to `kill-new' for the alternative ring.
-It must accept the same same arguments as `kill-new'.")
-
-(custom-autoload 'browse-kill-ring-alternative-push-function "browse-kill-ring+" t)
-
-(autoload 'browse-kill-ring-delete "browse-kill-ring+" "\
-Remove all occurrences of selection at point from current selection ring.
-
-\(fn)" t nil)
-
-(autoload 'browse-kill-ring-insert-and-move "browse-kill-ring+" "\
-Like `browse-kill-ring-insert', but move selection to front of ring.
-Insert the selection at point unless optional arg
-APPEND/PREPEND is:
- `append'  - insert at eob, not at point
- `prepend' - insert at bob, not at point
-
-\(fn &optional QUIT APPEND/PREPEND)" t nil)
-
-(autoload 'browse-kill-ring-prepend-insert-and-move "browse-kill-ring+" "\
-`browse-kill-ring-prepend-insert', but move selection to front of ring.
-
-\(fn &optional QUIT)" t nil)
-
-(autoload 'browse-kill-ring-append-insert-and-move "browse-kill-ring+" "\
-`browse-kill-ring-append-insert', but move selection to front of ring.
-
-\(fn &optional QUIT)" t nil)
-
-(autoload 'browse-kill-ring-forward "browse-kill-ring+" "\
-Move forward by ARG selection-ring entries.
-
-\(fn &optional ARG)" t nil)
-
-(autoload 'browse-kill-ring-default-keybindings "browse-kill-ring+" "\
-Set up `M-y' so that it can invoke `browse-kill-ring'.
-See also option `browse-kill-ring-yank-commands'.
-
-\(fn)" t nil)
-
-(autoload 'browse-kill-ring-edit "browse-kill-ring+" "\
-Edit the current selection ring entry at point.
-
-\(fn)" t nil)
-
-(autoload 'browse-kill-ring-edit-finish "browse-kill-ring+" "\
-Commit the changes to the current selection ring.
-
-\(fn)" t nil)
-
-(autoload 'browse-kill-ring "browse-kill-ring+" "\
-Browse the current selection ring.
-With a prefix arg, browse the alternative selection ring instead.
-
-\(If `browse-kill-ring-alternative-ring' is nil, then a prefix arg has
-no effect.)
-
-\(fn &optional OTHER-RING-P)" t nil)
-
-(autoload 'browse-kill-ring-switch-to-other-kill-ring "browse-kill-ring+" "\
-Browse the other selection ring.
-If the current ring is `kill-ring' then browse the alternative ring
-\(e.g. `secondary-selection-ring'), and vice versa.  The alternative
-ring is the value of `browse-kill-ring-alternative-ring'.
-
-\(fn)" t nil)
-
-(autoload 'toggle-browse-kill-ring-display-style "browse-kill-ring+" "\
-Toggle browse-kill-ring-display-style between `separated' and `one-line'.
-
-\(fn)" t nil)
-
-(autoload 'browse-kill-ring-copy-to-other-ring "browse-kill-ring+" "\
-Copy the selection at point from current selection ring to other ring.
-With a prefix arg, move it instead of copying it.
-If the other ring is also displayed, then its displayed is updated.
-
-\(fn &optional MOVEP)" t nil)
-
-;;;***
-
 ;;;### (autoloads (diredp-send-bug-report diredp-dired-plus-help
-;;;;;;  diredp-describe-mode diredp-mouse-do-chown diredp-mouse-do-chgrp
-;;;;;;  diredp-mouse-do-chmod diredp-mouse-do-load diredp-mouse-do-byte-compile
-;;;;;;  diredp-mouse-do-compress diredp-mouse-do-grep diredp-mouse-do-print
-;;;;;;  diredp-mouse-do-hardlink diredp-mouse-do-symlink diredp-mouse-do-shell-command
-;;;;;;  diredp-mouse-do-delete diredp-mouse-downcase diredp-mouse-upcase
-;;;;;;  diredp-mouse-do-rename diredp-mouse-do-copy diredp-mouse-flag-file-deletion
-;;;;;;  diredp-mouse-mark/unmark-mark-region-files diredp-mouse-mark-region-files
-;;;;;;  diredp-mouse-mark/unmark diredp-mouse-unmark diredp-mouse-mark
-;;;;;;  diredp-mouse-backup-diff diredp-mouse-diff diredp-mouse-ediff
-;;;;;;  diredp-mouse-view-file diredp-mouse-find-file dired-mouse-find-file-other-window
-;;;;;;  diredp-mouse-find-file-other-frame diredp-find-file-other-frame
-;;;;;;  diredp-mouse-3-menu diredp-toggle-marks-in-region diredp-flag-region-files-for-deletion
-;;;;;;  diredp-unmark-region-files diredp-mark-region-files dired-mark-sexp
-;;;;;;  diredp-chown-this-file diredp-chgrp-this-file diredp-chmod-this-file
+;;;;;;  diredp-describe-mode diredp-mouse-do-chmod diredp-mouse-do-load
+;;;;;;  diredp-mouse-do-byte-compile diredp-mouse-do-compress diredp-mouse-do-grep
+;;;;;;  diredp-mouse-do-print diredp-mouse-do-hardlink diredp-mouse-do-symlink
+;;;;;;  diredp-mouse-do-shell-command diredp-mouse-do-delete diredp-mouse-downcase
+;;;;;;  diredp-mouse-upcase diredp-mouse-do-rename diredp-mouse-do-copy
+;;;;;;  diredp-mouse-flag-file-deletion diredp-mouse-mark/unmark-mark-region-files
+;;;;;;  diredp-mouse-mark-region-files diredp-mouse-mark/unmark diredp-mouse-unmark
+;;;;;;  diredp-mouse-mark diredp-mouse-backup-diff diredp-mouse-diff
+;;;;;;  diredp-mouse-ediff diredp-mouse-view-file diredp-mouse-find-file
+;;;;;;  dired-mouse-find-file-other-window diredp-mouse-find-file-other-frame
+;;;;;;  diredp-find-file-other-frame diredp-mouse-3-menu diredp-toggle-marks-in-region
+;;;;;;  diredp-flag-region-files-for-deletion diredp-unmark-region-files
+;;;;;;  diredp-mark-region-files dired-mark-sexp diredp-chmod-this-file
 ;;;;;;  diredp-load-this-file diredp-byte-compile-this-file diredp-mouse-describe-file
 ;;;;;;  diredp-describe-file diredp-mouse-copy-tags diredp-copy-tags-this-file
 ;;;;;;  diredp-set-tag-value-this-file diredp-paste-replace-tags-this-file
@@ -218,11 +80,11 @@ If the other ring is also displayed, then its displayed is updated.
 ;;;;;;  diredp-symlink-this-file diredp-relsymlink-this-file diredp-copy-this-file
 ;;;;;;  diredp-rename-this-file diredp-upcase-this-file diredp-downcase-this-file
 ;;;;;;  diredp-capitalize-this-file diredp-delete-this-file diredp-capitalize
-;;;;;;  dired-do-delete dired-do-flagged-delete dired-goto-file dired-up-directory
-;;;;;;  dired-do-find-marked-files dired-maybe-insert-subdir diredp-w32-drives
-;;;;;;  diredp-w32-list-mapped-drives diredp-w32-drives-mode dired-do-load
-;;;;;;  dired-do-byte-compile dired-do-compress diredp-ediff diredp-omit-unmarked
-;;;;;;  diredp-omit-marked diredp-toggle-find-file-reuse-dir diredp-mouse-find-file-reuse-dir-buffer
+;;;;;;  dired-mark-files-regexp dired-do-delete dired-do-flagged-delete
+;;;;;;  dired-goto-file dired-up-directory dired-do-find-marked-files
+;;;;;;  dired-maybe-insert-subdir dired-do-load dired-do-byte-compile
+;;;;;;  dired-do-compress diredp-ediff diredp-omit-unmarked diredp-omit-marked
+;;;;;;  diredp-toggle-find-file-reuse-dir diredp-mouse-find-file-reuse-dir-buffer
 ;;;;;;  diredp-find-file-reuse-dir-buffer diredp-do-bookmark-in-bookmark-file
 ;;;;;;  diredp-set-bookmark-file-bookmark-for-marked diredp-mouse-do-bookmark
 ;;;;;;  diredp-do-bookmark diredp-mouse-do-set-tag-value diredp-do-set-tag-value
@@ -236,24 +98,23 @@ If the other ring is also displayed, then its displayed is updated.
 ;;;;;;  diredp-mark-files-tagged-some diredp-mark-files-tagged-none
 ;;;;;;  diredp-mark-files-tagged-all diredp-mark/unmark-extension
 ;;;;;;  diredp-marked-other-window diredp-marked diredp-do-redisplay-recursive
-;;;;;;  diredp-do-touch-recursive diredp-do-chown-recursive diredp-do-chgrp-recursive
-;;;;;;  diredp-do-chmod-recursive diredp-do-copy-recursive diredp-do-move-recursive
-;;;;;;  diredp-downcase-recursive diredp-upcase-recursive diredp-capitalize-recursive
-;;;;;;  diredp-copy-filename-as-kill-recursive diredp-list-marked-recursive
-;;;;;;  diredp-marked-recursive-other-window diredp-marked-recursive
-;;;;;;  diredp-do-grep-recursive diredp-do-query-replace-regexp-recursive
+;;;;;;  diredp-do-touch-recursive diredp-do-chmod-recursive diredp-do-copy-recursive
+;;;;;;  diredp-do-move-recursive diredp-downcase-recursive diredp-upcase-recursive
+;;;;;;  diredp-capitalize-recursive diredp-copy-filename-as-kill-recursive
+;;;;;;  diredp-list-marked-recursive diredp-marked-recursive-other-window
+;;;;;;  diredp-marked-recursive diredp-do-grep-recursive diredp-do-query-replace-regexp-recursive
 ;;;;;;  diredp-do-find-marked-files-recursive diredp-set-bookmark-file-bookmark-for-marked-recursive
 ;;;;;;  diredp-do-bookmark-in-bookmark-file-recursive diredp-do-bookmark-recursive
 ;;;;;;  diredp-image-dired-comment-files-recursive diredp-image-dired-delete-tag-recursive
 ;;;;;;  diredp-image-dired-tag-files-recursive diredp-image-dired-display-thumbs-recursive
-;;;;;;  diredp-do-hardlink-recursive diredp-do-symlink-recursive
+;;;;;;  diredp-do-print-recursive diredp-do-hardlink-recursive diredp-do-symlink-recursive
 ;;;;;;  diredp-do-shell-command-recursive diredp-insert-subdirs-recursive
 ;;;;;;  diredp-insert-subdirs diredp-dired-inserted-subdirs diredp-dired-this-subdir
 ;;;;;;  diredp-fileset diredp-dired-union-other-window diredp-dired-union
 ;;;;;;  diredp-dired-for-files-other-window diredp-dired-for-files
 ;;;;;;  diredp-dired-files-other-window diredp-dired-files diredp-w32-local-drives
 ;;;;;;  diredp-prompt-for-bookmark-prefix-flag diff-switches) "dired+"
-;;;;;;  "dired+/dired+.el" (20421 16987))
+;;;;;;  "dired+/dired+.el" (20604 5611))
 ;;; Generated autoloads from dired+/dired+.el
 
 (defvar diff-switches "-c" "\
@@ -425,6 +286,20 @@ Dired buffer and all subdirs, recursively.
 Add hard links for marked files, including those in marked subdirs.
 Like `dired-do-hardlink', but act recursively on subdirs to pick up the
 files to link.
+
+The files included are those that are marked in the current Dired
+buffer, or all files in the directory if none are marked.  Marked
+subdirectories are handled recursively in the same way.
+
+With a prefix argument, ignore all marks - include all files in this
+Dired buffer and all subdirs, recursively.
+
+\(fn &optional IGNORE-MARKS-P)" t nil)
+
+(autoload 'diredp-do-print-recursive "dired+" "\
+Print the marked files, including those in marked subdirs.
+Like `dired-do-print', but act recursively on subdirs to pick up the
+files to print.
 
 The files included are those that are marked in the current Dired
 buffer, or all files in the directory if none are marked.  Marked
@@ -695,18 +570,8 @@ command `cp -d'.
 Change the mode of the marked files, including those in marked subdirs.
 Symbolic modes like `g+w' are allowed.
 
-Note thatmarked subdirs are not changed.  Their markings are used only
+Note that marked subdirs are not changed.  Their markings are used only
 to indicate that some of their files are to be changed.
-
-\(fn &optional IGNORE-MARKS-P)" t nil)
-
-(autoload 'diredp-do-chgrp-recursive "dired+" "\
-Change the group of the marked (or next ARG) files.
-
-\(fn &optional IGNORE-MARKS-P)" t nil)
-
-(autoload 'diredp-do-chown-recursive "dired+" "\
-Change the owner of the marked (or next ARG) files.
 
 \(fn &optional IGNORE-MARKS-P)" t nil)
 
@@ -1162,33 +1027,6 @@ A prefix argument ARG specifies files to use instead of marked.
 
 \(fn &optional ARG)" t nil)
 
-(autoload 'diredp-w32-drives-mode "dired+" "\
-Open Dired for an MS Windows drive (local or remote).
-
-\(fn)" t nil)
-
-(autoload 'diredp-w32-list-mapped-drives "dired+" "\
-List network connection information for shared MS Windows resources.
-This just invokes the Windows `NET USE' command.
-
-\(fn)" t nil)
-
-(autoload 'diredp-w32-drives "dired+" "\
-Visit a list of MS Windows drives for use by Dired.
-With a prefix argument use another window for the list.
-In the list, use `mouse-2' or `RET' to open Dired for a given drive.
-
-The drives listed are the remote drives currently available, as
-determined by the Windows command `NET USE', plus the local drives
-specified by option `diredp-w32-local-drives', which you can
-customize.
-
-Note: When you are in Dired at the root of a drive (e.g. directory
-      `c:/'), command `dired-up-directory' invokes this command.
-      So you can use `\\[dired-up-directory]' to go up to the list of drives.
-
-\(fn &optional OTHER-WINDOW-P)" t nil)
-
 (autoload 'dired-maybe-insert-subdir "dired+" "\
 Move to Dired subdirectory line or subdirectory listing.
 This bounces you back and forth between a subdirectory line and its
@@ -1275,6 +1113,18 @@ NOTE: This deletes marked, not flagged, files.
 non-empty directories is allowed.
 
 \(fn &optional ARG)" t nil)
+
+(autoload 'dired-mark-files-regexp "dired+" "\
+Mark all files matching REGEXP for use in later commands.
+A prefix argument means to unmark them instead.
+`.' and `..' are never marked.
+
+REGEXP is an Emacs regexp, not a shell wildcard.  Thus, use `\\.o$' for
+object files--just `.o' will mark more than you might think.
+
+REGEXP is added to `regexp-search-ring', for regexp search.
+
+\(fn REGEXP &optional MARKER-CHAR)" t nil)
 
 (autoload 'diredp-capitalize "dired+" "\
 Rename all marked (or next ARG) files by capitalizing them.
@@ -1437,16 +1287,6 @@ In Dired, load the file on the cursor line.
 
 (autoload 'diredp-chmod-this-file "dired+" "\
 In Dired, change the mode of the file on the cursor line.
-
-\(fn)" t nil)
-
-(autoload 'diredp-chgrp-this-file "dired+" "\
-In Dired, change the group of the file on the cursor line.
-
-\(fn)" t nil)
-
-(autoload 'diredp-chown-this-file "dired+" "\
-In Dired, change the owner of the file on the cursor line.
 
 \(fn)" t nil)
 
@@ -1682,16 +1522,6 @@ This calls chmod, so symbolic modes like `g+w' are allowed.
 
 \(fn EVENT)" t nil)
 
-(autoload 'diredp-mouse-do-chgrp "dired+" "\
-Change the group of this file.
-
-\(fn EVENT)" t nil)
-
-(autoload 'diredp-mouse-do-chown "dired+" "\
-Change the owner of this file.
-
-\(fn EVENT)" t nil)
-
 (autoload 'diredp-describe-mode "dired+" "\
 Describe Dired mode, including Dired+ features.
 This is `describe-mode' plus a description of Dired+ features.
@@ -1711,8 +1541,57 @@ Send a bug report about a Dired+ problem.
 
 ;;;***
 
+;;;### (autoloads (el-get-checksum el-get-make-recipes el-get-cd
+;;;;;;  el-get-self-update el-get-update-all el-get-version) "el-get"
+;;;;;;  "el-get/el-get.el" (20604 2797))
+;;; Generated autoloads from el-get/el-get.el
+
+(autoload 'el-get-version "el-get" "\
+Message the current el-get version
+
+\(fn)" t nil)
+
+(autoload 'el-get-update-all "el-get" "\
+Performs update of all installed packages.
+
+\(fn &optional NO-PROMPT)" t nil)
+
+(autoload 'el-get-self-update "el-get" "\
+Update el-get itself.  The standard recipe takes care of reloading the code.
+
+\(fn)" t nil)
+
+(autoload 'el-get-cd "el-get" "\
+Open dired in the package directory.
+
+\(fn PACKAGE)" t nil)
+
+(autoload 'el-get-make-recipes "el-get" "\
+Loop over `el-get-sources' and write a recipe file for each
+entry which is not a symbol and is not already a known recipe.
+
+\(fn &optional DIR)" t nil)
+
+(autoload 'el-get-checksum "el-get" "\
+Compute the checksum of the given package, and put it in the kill-ring
+
+\(fn PACKAGE &optional PACKAGE-STATUS-ALIST)" t nil)
+
+;;;***
+
+;;;### (autoloads (el-get-list-packages) "el-get-list-packages" "el-get/el-get-list-packages.el"
+;;;;;;  (20604 2797))
+;;; Generated autoloads from el-get/el-get-list-packages.el
+
+(autoload 'el-get-list-packages "el-get-list-packages" "\
+Display a list of packages.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (ack-find-file ack-find-same-file ack ack-same)
-;;;;;;  "full-ack" "full-ack/full-ack.el" (20421 16436))
+;;;;;;  "full-ack" "full-ack/full-ack.el" (20604 3670))
 ;;; Generated autoloads from full-ack/full-ack.el
 
 (autoload 'ack-same "full-ack" "\
@@ -1752,8 +1631,33 @@ Prompt to find a file found by ack in DIRECTORY.
 
 ;;;***
 
-;;;### (autoloads (magit-status) "magit" "magit/magit.el" (20421
-;;;;;;  16525))
+;;;### (autoloads (js2-imenu-extras-setup) "js2-imenu-extras" "js2-mode/js2-imenu-extras.el"
+;;;;;;  (20604 4015))
+;;; Generated autoloads from js2-mode/js2-imenu-extras.el
+
+(autoload 'js2-imenu-extras-setup "js2-imenu-extras" "\
+Not documented
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads (js2-mode) "js2-mode" "js2-mode/js2-mode.el" (20604
+;;;;;;  4015))
+;;; Generated autoloads from js2-mode/js2-mode.el
+ (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(autoload 'js2-mode "js2-mode" "\
+Major mode for editing JavaScript code.
+
+\\{js2-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (magit-status) "magit" "magit/magit.el" (20604
+;;;;;;  5640))
 ;;; Generated autoloads from magit/magit.el
 
 (autoload 'magit-status "magit" "\
@@ -1771,7 +1675,7 @@ user input.
 ;;;***
 
 ;;;### (autoloads (magit-blame-mode) "magit-blame" "magit/magit-blame.el"
-;;;;;;  (20421 16525))
+;;;;;;  (20604 5640))
 ;;; Generated autoloads from magit/magit-blame.el
 
 (autoload 'magit-blame-mode "magit-blame" "\
@@ -1782,7 +1686,7 @@ Display blame information inline.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-stgit magit-stgit-mode) "magit-stgit"
-;;;;;;  "magit/magit-stgit.el" (20421 16525))
+;;;;;;  "magit/magit-stgit.el" (20604 5640))
 ;;; Generated autoloads from magit/magit-stgit.el
 
 (autoload 'magit-stgit-mode "magit-stgit" "\
@@ -1798,7 +1702,7 @@ Unconditionally turn on `magit-stgit-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-svn magit-svn-mode) "magit-svn"
-;;;;;;  "magit/magit-svn.el" (20421 16525))
+;;;;;;  "magit/magit-svn.el" (20604 5640))
 ;;; Generated autoloads from magit/magit-svn.el
 
 (autoload 'magit-svn-mode "magit-svn" "\
@@ -1814,7 +1718,7 @@ Unconditionally turn on `magit-svn-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-topgit magit-topgit-mode) "magit-topgit"
-;;;;;;  "magit/magit-topgit.el" (20421 16525))
+;;;;;;  "magit/magit-topgit.el" (20604 5640))
 ;;; Generated autoloads from magit/magit-topgit.el
 
 (autoload 'magit-topgit-mode "magit-topgit" "\
@@ -1829,8 +1733,121 @@ Unconditionally turn on `magit-topgit-mode'.
 
 ;;;***
 
+;;;### (autoloads (global-magit-wip-save-mode magit-wip-save-mode
+;;;;;;  magit-wip-mode) "magit-wip" "magit/magit-wip.el" (20604 5640))
+;;; Generated autoloads from magit/magit-wip.el
+
+(defvar magit-wip-mode nil "\
+Non-nil if Magit-Wip mode is enabled.
+See the command `magit-wip-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `magit-wip-mode'.")
+
+(custom-autoload 'magit-wip-mode "magit-wip" nil)
+
+(autoload 'magit-wip-mode "magit-wip" "\
+In Magit log buffers; give wip refs a special appearance.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'magit-wip-save-mode "magit-wip" "\
+Magit support for committing to a work-in-progress ref.
+
+When this minor mode is turned on and a file is saved inside a writable
+git repository then it is also committed to a special work-in-progress
+ref.
+
+\(fn &optional ARG)" t nil)
+
+(defvar global-magit-wip-save-mode nil "\
+Non-nil if Global-Magit-Wip-Save mode is enabled.
+See the command `global-magit-wip-save-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-magit-wip-save-mode'.")
+
+(custom-autoload 'global-magit-wip-save-mode "magit-wip" nil)
+
+(autoload 'global-magit-wip-save-mode "magit-wip" "\
+Toggle Magit-Wip-Save mode in every possible buffer.
+With prefix ARG, turn Global-Magit-Wip-Save mode on if and only if
+ARG is positive.
+Magit-Wip-Save mode is enabled in all buffers where
+`turn-on-magit-wip-save' would do it.
+See `magit-wip-save-mode' for more information on Magit-Wip-Save mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads (list-packages describe-package package-initialize
+;;;;;;  package-install-file package-install-from-buffer package-install
+;;;;;;  package-enable-at-startup) "package" "package/package.el"
+;;;;;;  (20604 3144))
+;;; Generated autoloads from package/package.el
+
+(defvar package-enable-at-startup t "\
+Whether to activate installed packages when Emacs starts.
+If non-nil, packages are activated after reading the init file
+and before `after-init-hook'.  Activation is not done if
+`user-init-file' is nil (e.g. Emacs was started with \"-q\").
+
+Even if the value is nil, you can type \\[package-initialize] to
+activate the package system at any time.")
+
+(custom-autoload 'package-enable-at-startup "package" t)
+
+(autoload 'package-install "package" "\
+Install the package named NAME.
+Interactively, prompt for the package name.
+The package is found on one of the archives in `package-archives'.
+
+\(fn NAME)" t nil)
+
+(autoload 'package-install-from-buffer "package" "\
+Install a package from the current buffer.
+When called interactively, the current buffer is assumed to be a
+single .el file that follows the packaging guidelines; see info
+node `(elisp)Packaging'.
+
+When called from Lisp, PKG-INFO is a vector describing the
+information, of the type returned by `package-buffer-info'; and
+TYPE is the package type (either `single' or `tar').
+
+\(fn PKG-INFO TYPE)" t nil)
+
+(autoload 'package-install-file "package" "\
+Install a package from a file.
+The file can either be a tar file or an Emacs Lisp file.
+
+\(fn FILE)" t nil)
+
+(autoload 'package-initialize "package" "\
+Load Emacs Lisp packages, and activate them.
+The variable `package-load-list' controls which packages to load.
+If optional arg NO-ACTIVATE is non-nil, don't activate packages.
+
+\(fn &optional NO-ACTIVATE)" t nil)
+
+(autoload 'describe-package "package" "\
+Display the full documentation of PACKAGE (a symbol).
+
+\(fn PACKAGE)" t nil)
+
+(autoload 'list-packages "package" "\
+Display a list of packages.
+Fetches the updated list of packages before displaying.
+The list is displayed in a buffer named `*Packages*'.
+
+\(fn)" t nil)
+
+(defalias 'package-list-packages 'list-packages)
+
+;;;***
+
 ;;;### (autoloads (rebase-mode) "rebase-mode" "magit/rebase-mode.el"
-;;;;;;  (20421 16525))
+;;;;;;  (20604 5640))
 ;;; Generated autoloads from magit/rebase-mode.el
 
 (autoload 'rebase-mode "rebase-mode" "\
@@ -1847,19 +1864,8 @@ running 'man git-rebase' at the command line) for details.
 
 ;;;***
 
-;;;### (autoloads (smex-initialize) "smex" "smex/smex.el" (20506
-;;;;;;  25976))
-;;; Generated autoloads from smex/smex.el
-
-(autoload 'smex-initialize "smex" "\
-Not documented
-
-\(fn)" t nil)
-
-;;;***
-
 ;;;### (autoloads (textmate-mode) "textmate" "textmate/textmate.el"
-;;;;;;  (20421 15742))
+;;;;;;  (20604 3329))
 ;;; Generated autoloads from textmate/textmate.el
 
 (defvar textmate-mode nil "\
@@ -1878,20 +1884,9 @@ TextMate Emulation Minor Mode
 
 ;;;***
 
-;;;### (autoloads (twit) "twittering-mode" "twittering-mode/twittering-mode.el"
-;;;;;;  (20483 50809))
-;;; Generated autoloads from twittering-mode/twittering-mode.el
-
-(autoload 'twit "twittering-mode" "\
-Start twittering-mode.
-
-\(fn)" t nil)
-
-;;;***
-
 ;;;### (autoloads (wrap-region-global-mode turn-off-wrap-region-mode
 ;;;;;;  turn-on-wrap-region-mode wrap-region-mode) "wrap-region"
-;;;;;;  "wrap-region/wrap-region.el" (20421 16331))
+;;;;;;  "wrap-region/wrap-region.el" (20604 3184))
 ;;; Generated autoloads from wrap-region/wrap-region.el
 
 (autoload 'wrap-region-mode "wrap-region" "\
@@ -1905,7 +1900,7 @@ Turn on `wrap-region-mode'
 \(fn)" t nil)
 
 (autoload 'turn-off-wrap-region-mode "wrap-region" "\
-Turn off `wrap-region-mode'.
+Turn off `wrap-region-mode'
 
 \(fn)" t nil)
 
@@ -1930,9 +1925,11 @@ See `wrap-region-mode' for more information on Wrap-Region mode.
 
 ;;;***
 
-;;;### (autoloads (yaml-mode) "yaml-mode" "yaml-mode/yaml-mode.el"
-;;;;;;  (20421 17448))
+;;;### (autoloads (yaml-mode yaml) "yaml-mode" "yaml-mode/yaml-mode.el"
+;;;;;;  (20604 5688))
 ;;; Generated autoloads from yaml-mode/yaml-mode.el
+
+(let ((loads (get 'yaml 'custom-loads))) (if (member '"yaml-mode" loads) nil (put 'yaml 'custom-loads (cons '"yaml-mode" loads))))
 
 (autoload 'yaml-mode "yaml-mode" "\
 Simple mode to edit YAML.
@@ -1941,16 +1938,17 @@ Simple mode to edit YAML.
 
 \(fn)" t nil)
 
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
 
 ;;;***
 
-;;;### (autoloads nil nil ("auto-complete+/auto-complete+.el" "auto-complete/auto-complete-config.el"
-;;;;;;  "auto-complete/auto-complete-pkg.el" "auto-complete/auto-complete.el"
-;;;;;;  "el-get/el-get-install.el" "el-get/el-get.el" "flymake-extension/flymake-extension.el"
+;;;### (autoloads nil nil ("auto-complete+/auto-complete+.el" "el-get/el-get-autoloads.el"
+;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
+;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "golden-ratio/golden-ratio.el"
 ;;;;;;  "magit/50magit.el" "magit/magit-bisect.el" "magit/magit-key-mode.el"
-;;;;;;  "magit/magit-pkg.el" "magit/magit-wip.el" "popup/popup-test.el"
-;;;;;;  "popup/popup.el" "rails-el/inflections.el" "rails-el/predictive-prog-mode.el"
+;;;;;;  "magit/magit-pkg.el" "rails-el/inflections.el" "rails-el/predictive-prog-mode.el"
 ;;;;;;  "rails-el/rails-bytecompile.el" "rails-el/rails-cmd-proxy.el"
 ;;;;;;  "rails-el/rails-compat.el" "rails-el/rails-controller-layout.el"
 ;;;;;;  "rails-el/rails-controller-minor-mode.el" "rails-el/rails-core.el"
@@ -1969,8 +1967,8 @@ Simple mode to edit YAML.
 ;;;;;;  "rails-el/rails.el" "rhtml-mode/rhtml-erb.el" "rhtml-mode/rhtml-fonts.el"
 ;;;;;;  "rhtml-mode/rhtml-mode.el" "rhtml-mode/rhtml-navigation.el"
 ;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el"
-;;;;;;  "ruby-test/ruby-test.el" "twittering-mode/test.el") (20580
-;;;;;;  3156 211833))
+;;;;;;  "wrap-region/wrap-region-autoloads.el" "wrap-region/wrap-region-pkg.el")
+;;;;;;  (20604 6726 671997))
 
 ;;;***
 
