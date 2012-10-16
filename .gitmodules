@@ -22,3 +22,21 @@
 [submodule "el-get/ace-jump-mode"]
 	path = el-get/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode
+[submodule "el-get/auto-complete"]
+	path = el-get/auto-complete
+	url = http://github.com/m2ym/auto-complete.git
+[submodule "el-get/fuzzy"]
+	path = el-get/fuzzy
+	url = http://github.com/m2ym/fuzzy-el.git
+[submodule "el-get/golden-ratio"]
+	path = el-get/golden-ratio
+	url = git://github.com/roman/golden-ratio.el.git
+[submodule "el-get/js2-mode"]
+	path = el-get/js2-mode
+	url = http://github.com/mooz/js2-mode.git
+[submodule "el-get/yaml-mode"]
+	path = el-get/yaml-mode
+	url = http://github.com/yoshiki/yaml-mode.git
+[submodule "el-get/yasnippet"]
+	path = el-get/yasnippet
+	url = http://github.com/capitaomorte/yasnippet.git
