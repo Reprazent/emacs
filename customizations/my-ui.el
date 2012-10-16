@@ -20,8 +20,12 @@
 (set-variable (quote visible-bell) t nil)
 
 (set-frame-font "Bitstream Vera Sans Mono-13")
+
+;; set the theme directory
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
 ;;(load-theme 'solarized-dark)
-(load-theme 'sunburst)
+(load-theme 'sunburst t)
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#222")
 ; colors
@@ -53,3 +57,7 @@
 ; Prettier line numbers
 (custom-set-faces
  '(linum ((t (:foreground "#686B71")))))
+
+(require 'golden-ratio)
+
+(golden-ratio-enable)
