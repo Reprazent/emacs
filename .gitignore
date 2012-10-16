@@ -3,3 +3,9 @@ ac-comphist.dat
 .saveplace
 .savehist
 .org-id-locations
+/el-get/.DS_Store
+/.savehist
+/.saveplace
+/el-get/.loaddefs.el
+/el-get/.loaddefs.elc
+/el-get/.status.el

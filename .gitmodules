@@ -1,9 +1,3 @@
-[submodule "el-get/android-mode"]
-	path = el-get/android-mode
-	url = https://github.com/remvee/android-mode.git
-[submodule "el-get/auto-complete"]
-	path = el-get/auto-complete
-	url = http://github.com/m2ym/auto-complete.git
 [submodule "el-get/el-get"]
 	path = el-get/el-get
 	url = http://github.com/dimitri/el-get.git
@@ -22,18 +16,9 @@
 [submodule "el-get/rhtml-mode"]
 	path = el-get/rhtml-mode
 	url = https://github.com/eschulte/rhtml.git
-[submodule "el-get/smex"]
-	path = el-get/smex
-	url = http://github.com/nonsequitur/smex.git
 [submodule "el-get/textmate"]
 	path = el-get/textmate
 	url = https://github.com/defunkt/textmate.el.git
-[submodule "el-get/twittering-mode"]
-	path = el-get/twittering-mode
-	url = https://github.com/hayamiz/twittering-mode.git
-[submodule "el-get/yaml-mode"]
-	path = el-get/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
 [submodule "el-get/ace-jump-mode"]
 	path = el-get/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode
