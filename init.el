@@ -46,7 +46,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("5d9f60beca847f835b57bf0d05187d7d6c4cff063a8655789fe7ae7bcb88c90b" default))))
+ '(custom-safe-themes (quote ("5d9f60beca847f835b57bf0d05187d7d6c4cff063a8655789fe7ae7bcb88c90b" default)))
+ '(pivotal-api-token "daeb2108c8289cee89261642957a2111"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
