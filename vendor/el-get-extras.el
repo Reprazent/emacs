@@ -13,6 +13,13 @@
              :description "Pivotal inside emacs"
              :url "git://github.com/jxa/pivotal-tracker.git"
              )
+      (:name auto-complete
+             :type git
+             :website "https://github.com/auto-complete/auto-complete"
+             :description "Autocomplete"
+             :url "git://github.com/auto-complete/auto-complete"
+             )
+
 
       )
 )

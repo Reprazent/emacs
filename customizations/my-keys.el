@@ -34,7 +34,7 @@
 (global-set-key [(super })] 'next-buffer)
 
 ; window switching
-(global-set-key (kbd "s-`") 'other-window)
+(global-set-key (kbd "M-`") 'other-window)
 
 ; close window
 (global-set-key [(super w)] (lambda ()
@@ -48,14 +48,6 @@
 
 ; indentation
 (global-set-key (kbd "s-I") 'indent-region)
-
-; AZERTY stuff
-(global-set-key (kbd "M-°") "]")
-(global-set-key (kbd "M-5") "[")
-(global-set-key (kbd "M-(") "{")
-(global-set-key (kbd "M-)") "}")
-(global-set-key (kbd "M-L") "|")
-(global-set-key (kbd "M-/") "\\")
 
 ; split window stuff
 (global-set-key (kbd "s-d") 'split-window-horizontally)

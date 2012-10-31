@@ -22,9 +22,6 @@
 [submodule "el-get/ace-jump-mode"]
 	path = el-get/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode
-[submodule "el-get/auto-complete"]
-	path = el-get/auto-complete
-	url = http://github.com/m2ym/auto-complete.git
 [submodule "el-get/fuzzy"]
 	path = el-get/fuzzy
 	url = http://github.com/m2ym/fuzzy-el.git
