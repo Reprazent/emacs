@@ -58,6 +58,7 @@
 ; Markdown mode
 (autoload 'markdown-mode "markdown-mode.el"
    "Major mode for editing Markdown files" t)
+
 (setq auto-mode-alist
    (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
@@ -172,4 +173,3 @@
   (save-excursion
     (beginning-of-line)
     (search-forward "#" (point-at-eol) t)))
-

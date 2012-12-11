@@ -27,7 +27,7 @@
 (global-set-key [(super r)] 'query-replace)
 
 ; open file
-(global-set-key [(super o)] 'find-file)
+; (global-set-key [(super o)] 'find-file)
 
 ; buffer switching
 (global-set-key [(super {)] 'previous-buffer)

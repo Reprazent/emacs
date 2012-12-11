@@ -24,10 +24,11 @@
 ;; set the theme directory
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-;;(load-theme 'solarized-dark)
-(load-theme 'sunburst t)
+(load-theme 'better-tango-dark t)
+;; (load-theme 'solarized-dark t)
+;; (load-theme 'sunburst t)
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#222")
+;; (set-face-background 'hl-line "#222")
 ; colors
 (custom-set-faces
  '(flymake-errline ((t :underline "red")))
@@ -48,8 +49,8 @@
 (set-frame-size-according-to-resolution)
 
 ; Translucency
-(set-frame-parameter (selected-frame) 'alpha '(95 95))
-(add-to-list 'default-frame-alist '(alpha 95 95))
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(add-to-list 'default-frame-alist '(alpha 100 100))
 
 ; smoother scrolling
 (setq mouse-wheel-scroll-amount '(0.0001))
@@ -57,7 +58,3 @@
 ; Prettier line numbers
 (custom-set-faces
  '(linum ((t (:foreground "#686B71")))))
-
-(require 'golden-ratio)
-
-(golden-ratio-enable)

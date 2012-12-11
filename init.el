@@ -30,6 +30,8 @@
 
 (wrap-region-global-mode t)
 (textmate-mode t)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;; Start the server for usefor opening from command line
 (server-start)
@@ -46,22 +48,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("5d9f60beca847f835b57bf0d05187d7d6c4cff063a8655789fe7ae7bcb88c90b" default)))
- '(pivotal-api-token "daeb2108c8289cee89261642957a2111"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(diff-added ((t (:foreground "#559944"))))
- '(diff-context ((t nil)))
- '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-function ((t (:foreground "#00bbdd"))))
- '(diff-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-hunk-header ((t (:foreground "#fbde2d"))))
- '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
- '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
- '(diff-removed ((t (:foreground "#de1923"))))
- '(flymake-errline ((t :underline "red")))
- '(flymake-warnline ((t :underline "green")))
- '(linum ((t (:foreground "#686B71")))))
+ '(custom-safe-themes (quote ("d47c3413a2ce26df41ffedbe712028a5ef8d36b32b2b1cdaac0e6c484c3e3267" "5d9f60beca847f835b57bf0d05187d7d6c4cff063a8655789fe7ae7bcb88c90b" default)))
+ '(pivotal-api-token "daeb2108c8289cee89261642957a2111")
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
+
+(put 'downcase-region 'disabled nil)

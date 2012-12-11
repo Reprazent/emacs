@@ -37,10 +37,6 @@
 (setq ido-enable-flex-matching t) ; case insensitive matching
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 
-; kill ring browsing
-;; (require 'browse-kill-ring+)
-;;(browse-kill-ring-default-keybindings)
-
 ; rename file and buffer functionality from whithin a buffer
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun rename-file-and-buffer (new-name)
